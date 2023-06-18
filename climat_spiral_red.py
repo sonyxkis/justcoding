@@ -16,7 +16,6 @@ running = True
 cycles = [int(WIDTH/2 * i/100) for i in (80,50,20)]
 cycle  = math.tau
 
-
 #data = pd.read_csv('https://data.giss.nasa.gov/gistemp/tabledata_v4/GLB.Ts+dSST.csv', header=1)
 data = pd.read_csv('GLB.Ts+dSST.csv', header=1)
 
@@ -44,7 +43,6 @@ for month in range(1,13):
     window.blit(img,rect)
 
 lines = []
-
 for index, zeile in data.iterrows():
     for i in range(1,13):
         teta = cycle / 12 * i
@@ -90,6 +88,7 @@ while running:
 
     clock.tick(1)
 pg.quit()    
+
 
     
 
