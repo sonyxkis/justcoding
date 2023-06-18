@@ -3,3 +3,4 @@
 #Just Codinig
 #Tying to Code something
 #Almost Stupid but I'm learning 
+#Now .gitignore file
