@@ -55,7 +55,6 @@ for index, zeile in data.iterrows():
 pg.display.flip()
 
 
-clock.tick(1)
 for (year,p1,_), (_,p2,anomalie) in zip(lines, lines[1:]):
     pg.draw.line(window, (255,0,0), p1, p2, 3)
     pg.draw.rect(window, BG_COLOR, rect)
@@ -65,17 +64,6 @@ for (year,p1,_), (_,p2,anomalie) in zip(lines, lines[1:]):
     
     pg.display.flip()
 
-
-for k in cycles:
-    pg.draw.circle(window,(60,80,90),(WIDTH/2,HIGHT/2),k,3)
-
-
-for t,k in enumerate(cycles, start=-1):
-    
-    img = pg.font.SysFont(None, 30).render(str(t),True,(255,255,0))
-    rect = img.get_rect(center=(WIDTH/2,k))
-    pg.draw.rect(window, BG_COLOR, rect)
-    window.blit(img,rect)
 
 pg.display.flip()
 
